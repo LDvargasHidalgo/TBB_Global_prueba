@@ -1,0 +1,15 @@
+nav
+{
+  background-color: rgb(238, 235, 235);
+}
+
+.link{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.active{
+  color: blue !important;
+}
+
+

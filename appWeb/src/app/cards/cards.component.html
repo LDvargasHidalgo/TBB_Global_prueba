@@ -1,0 +1,21 @@
+
+<div class="input-group mb-3">
+  <span class="input-group-text">
+    <i class="fas fa-search" (click)="clearSearch()"></i>
+  </span>
+  <input type="text" class="form-control col-md-4" name="filterPost" placeholder="Name" [(ngModel)]="filterPost">
+</div>
+<div class="row">
+  <div class="col-md-4" *ngFor="let user of users | filter:filterPost">
+    <div class="card shadow mb-3">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{user.name}}</h5>
+        <p class="card-text text-center"><i class="fa-solid fa-user"></i> {{user.username}}</p>
+        <p class="card-text text-center"><i class="fa-solid fa-envelope"></i>  {{user.email}}</p>
+        <div class="text-center">
+          <button type="button" name="ver-mas" [routerLink]="['/user/information', user.id]" class="btn btn-primary">View more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

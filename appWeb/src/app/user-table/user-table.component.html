@@ -1,0 +1,39 @@
+<div class="card  shadow mb-3">
+  <div class="card-body text-primary">
+    <div class="col">
+      <h5 class="card-title text-center h2">List of Users</h5>
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">
+            <i class="fas fa-search" (click)="clearSearch()"></i>
+          </span>
+          <input type="text" class="form-control col-md-4" name="filterPost" placeholder="Name" [(ngModel)]="filterPost">
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" >
+        <thead>
+          <tr class="text-center">
+            <th>Id</th>
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>View More</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | filter:filterPost">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td class="text-center">
+              <button type="button" name="ver-mas" [routerLink]="['/user/information',user.id]" class="btn btn-primary">View more</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

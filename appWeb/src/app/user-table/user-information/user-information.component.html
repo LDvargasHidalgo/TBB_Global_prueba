@@ -1,0 +1,40 @@
+<div class="container-fluid vh-100 d-flex justify-content-center"  style="margin-top: 50px;">
+  <div *ngIf="userData" class="card text-white bg-dark shadow">
+    <div class="card-body">
+      <div class="text-center">
+        <h2 class="card-title">{{ userData.name }}</h2>
+      </div>
+
+      <div class="row text-center mt-4 ">
+        <!-- Primera columna -->
+        <div class="col-md-6">
+          <p class="card-text">Username: {{ userData.username }}</p>
+          <p class="card-text">Email: {{ userData.email }}</p>
+          <p class="card-text">Phone: {{ userData.phone }}</p>
+          <p class="card-text">Website: {{ userData.website }}</p>
+          <h4>Company:</h4>
+          <p class="card-text">Name: {{ userData.company.name }}</p>
+          <p class="card-text">Catch Phrase: {{ userData.company.catchPhrase }}</p>
+          <p class="card-text">BS: {{ userData.company.bs }}</p>
+        </div>
+
+        <!-- Segunda columna -->
+        <div class="col-md-6">
+          <h4>Address:</h4>
+          <p class="card-text">Street: {{ userData.address.street }}</p>
+          <p class="card-text">Suite: {{ userData.address.suite }}</p>
+          <p class="card-text">City: {{ userData.address.city }}</p>
+          <p class="card-text">Zip Code: {{ userData.address.zipcode }}</p>
+
+
+          <h4>Geo Location:</h4>
+          <p class="card-text">Latitude: {{ userData.address.geo.lat }}</p>
+          <p class="card-text">Longitude: {{ userData.address.geo.lng }}</p>
+          <a [attr.href]="'https://www.google.com/maps/search/?api=1&query=' + userData.address.geo.lat + ',' + userData.address.geo.lng" target="_blank">
+            <i class="fas fa-location-dot fa-2x mr-2 text-primary"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
