@@ -1,11 +1,11 @@
-<div class="container-fluid vh-100 d-flex justify-content-center"  style="margin-top: 50px;">
-  <div *ngIf="userData" class="card text-white bg-dark shadow">
+<div class="row justify-content-center">
+  <div class="card shadow mb-3">
     <div class="card-body">
       <div class="text-center">
         <h2 class="card-title">{{ userData.name }}</h2>
       </div>
-
       <div class="row text-center mt-4 ">
+
         <!-- Primera columna -->
         <div class="col-md-6">
           <p class="card-text">Username: {{ userData.username }}</p>
@@ -30,11 +30,11 @@
           <h4>Geo Location:</h4>
           <p class="card-text">Latitude: {{ userData.address.geo.lat }}</p>
           <p class="card-text">Longitude: {{ userData.address.geo.lng }}</p>
-          <a [attr.href]="'https://www.google.com/maps/search/?api=1&query=' + userData.address.geo.lat + ',' + userData.address.geo.lng" target="_blank">
+          <a [attr.href]="'https://www.google.com/maps/search/?api=1&query=' + userData.address.geo.lat + ',' + userData.address.geo.lng"
+            target="_blank">
             <i class="fas fa-location-dot fa-2x mr-2 text-primary"></i>
           </a>
         </div>
       </div>
     </div>
   </div>
-</div>
