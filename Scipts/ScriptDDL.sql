@@ -36,4 +36,3 @@ CREATE TABLE professors (
     FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
 
-/*drop database academicTB_Global;
