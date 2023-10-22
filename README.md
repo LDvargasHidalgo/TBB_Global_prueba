@@ -4,7 +4,7 @@
 Bienvenido a **PruebaTBTBGlobal**, un proyecto que incluye una base de datos MySQL, una API desarrollada en Spring Boot y una aplicación web construida con Angular CLI. A continuación, encontrarás las instrucciones para configurar y ejecutar cada parte del proyecto.
 
 ## Parte 1: Bases de Datos 
-En la carpeta **bases de datos** encontrarás los scripts utilizados para crear y poblar la base de datos MySQL. Los archivos **ScriptDDL** contienen las instrucciones para la creación de las tablas, mientras que en **ScriptDML** encontrarás el llenado de las tablas y las consultas correspondientes. El modelo entidad-relación está disponible en el archivo **MER**.
+En la carpeta **Scripts** encontrarás los scripts utilizados para crear y poblar la base de datos MySQL. Los archivos **ScriptDDL** contienen las instrucciones para la creación de las tablas, mientras que en **ScriptDML** encontrarás el llenado de las tablas y las consultas correspondientes. El modelo entidad-relación está disponible en el archivo **MER**.
 
 ## Parte 2: Interfaz de Programación de Aplicaciones (API)
 ### Tecnologías Utilizadas
